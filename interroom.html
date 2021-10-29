@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Doors</title>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="" class="navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <div class="d-flex">
+                    <button class="btn btn-outline-success"" ><img style="width: 50px;" src="./DoorsImg/Logo.png" alt=""></button>
+                </div>
+                <ul class="navbar-nav mr-auto mb-2">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Input.html" class="nav-link">Вікна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="interroom.html" class="nav-link">Міжкімнатні двері</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="delivery.html" class="nav-link">Оплата та  доставка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Контакти</a>
+                    </li>
+                    <li class="phone-navbar"><a href="tel:+380996009616">+38 (099) 600 96 16</a></li>
+                    <li class="phone-navbar"><a href="tel:+380986009616">+38 (098) 600 96 16</a></li>
+<!--                     <li class="nav-item">
+                        <a href="" class="nav-link">Блог</a>
+                    </li> -->
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal" id="call" >Викликати замірника</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 style="color: black;" class="modal-title" id="exampleModalLabel">Подати заявку</h5>
+                    <h6 style="color: red;" class="modal-title" id="exampleModalLabel">Запишись на безкоштовний замір та отримай гарантовану знижку 10%</h6>
+                    <button class="btn-close" data-dismiss="modal" aria-label="close" ></button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://formspree.io/f/mknpyeal" method="POST">
+                        <div class="row mb-3">
+                            <label for="inputName" class="col-sm-2 col-form-label" >Им'я</label>
+                            <div class="col-sm-10">
+                                <input type="name" name="name" class="form-control" id="inputName">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPhone" class="col-sm-2 col-form-label">Номер телефону</label>
+                            <div class="col-sm-10">
+                                <input type="phone" name="phone" class="form-control" id="inputPhone">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputAddress" class="col-sm-2 col-form-label">Адреса</label>
+                            <div class="col-sm-10">
+                                <input type="address" name="address" class="form-control" id="inputAddress">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-dismiss="modal" >Закрити</button>
+                            <button type="submit" class="btn btn-primary" >Відправити</button>
+                        </div>
+                        
+                    </form>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+<!--Modal-->
+    <div class="container text-center">
+        <p>
+            <h3 class="text-center" >Тип дверей</h3>
+            <a href="#multiCollapse3" style="font-size: larger; background-color: rgb(43, 35, 73);" data-toggle="collapse" title="Натисніть щоб показати/скрити" aria-controls="multiCollapse3" role="button" aria-expanded="false" class="btn btn-secondary" >Вхідні двері</a>
+            <a href="#multiCollapse1" style="font-size: larger; background-color: black;" data-toggle="collapse" title="Натисніть щоб показати/скрити" aria-controls="multiCollapse1" role="button" aria-expanded="false" class="btn btn-secondary" >Міжкімнатні двері</a>
+            <button class="btn btn-secondary" style="font-size: larger; background-color: rgb(86, 114, 75);" title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse2" aria-expanded="false" aria-controls="multiCollapse2">Розсувні двері</button>
+        </p>
+        <p class="collapse multi-collapse none" id="multiCollapse1">
+            <h4 class="collapse multi-collapse none" id="multiCollapse1" >Стиль дверей</h4>
+            <a id="multiCollapse1" class="btn btn-secondary collapse multi-collapse " href="#multiCollapse1" data-toggle="collapse" title="Натисніть щоб показати/скрити" aria-controls="multiCollapse1" role="button" aria-expanded="false"  >Приховати все</a>
+            <button id="multiCollapse1" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse5" aria-expanded="false" aria-controls="multiCollapse1">Харків</button>
+            <button id="multiCollapse1" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse6" aria-expanded="false" aria-controls="multiCollapse1">7000-9000</button>
+            <button id="multiCollapse1" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse7" aria-expanded="false" aria-controls="multiCollapse1">9000-11000</button>
+            <button id="multiCollapse1" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse8" aria-expanded="false" aria-controls="multiCollapse1">11000-13000</button>
+            <button id="multiCollapse1" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse9" aria-expanded="false" aria-controls="multiCollapse1">15000-17000</button>
+        </p>
+        <p class="collapse multi-collapse none" id="multiCollapse2">
+            <h4 class="collapse multi-collapse none" id="multiCollapse2" >Стиль дверей</h4>
+            <a id="multiCollapse2" class="btn btn-secondary collapse multi-collapse " href="#multiCollapse2" data-toggle="collapse" title="Натисніть щоб показати/скрити" aria-controls="multiCollapse2" role="button" aria-expanded="false"  >Приховати все</a>
+            <button id="multiCollapse2" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse10" aria-expanded="false" aria-controls="multiCollapse2">5500-7000</button>
+            <button id="multiCollapse2" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse11" aria-expanded="false" aria-controls="multiCollapse2">7000-9000</button>
+            <button id="multiCollapse2" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse12" aria-expanded="false" aria-controls="multiCollapse2">9000-11000</button>
+            <button id="multiCollapse2" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse13" aria-expanded="false" aria-controls="multiCollapse2">11000-13000</button>
+            <button id="multiCollapse2" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse14" aria-expanded="false" aria-controls="multiCollapse2">15000-17000</button>
+        </p>
+        <p class="collapse multi-collapse none" id="multiCollapse3">
+            <h4 class="collapse multi-collapse none" id="multiCollapse3" >Стиль дверей</h4>
+            <a id="multiCollapse3" class="btn btn-secondary collapse multi-collapse " href="#multiCollapse15" data-toggle="collapse" title="Натисніть щоб показати/скрити" aria-controls="multiCollapse15" role="button" aria-expanded="false"  >Приховати все</a>
+            <button id="multiCollapse3" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse15" aria-expanded="false" aria-controls="multiCollapse3">Харків</button>
+<!--             <button id="multiCollapse3" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse16" aria-expanded="false" aria-controls="multiCollapse3">7000-9000</button>
+            <button id="multiCollapse3" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse17" aria-expanded="false" aria-controls="multiCollapse3">9000-11000</button>
+            <button id="multiCollapse3" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse18" aria-expanded="false" aria-controls="multiCollapse3">11000-13000</button>
+            <button id="multiCollapse3" class="btn btn-secondary collapse multi-collapse " title="Натисніть щоб показати/скрити" data-toggle="collapse" type="button" data-target="#multiCollapse19" aria-expanded="false" aria-controls="multiCollapse3">15000-17000</button> -->
+        </p>
+        <h4 class="collapse multi-collapse none flex" id="multiCollapse15">Модельний ряд 4500-6500</h4>
+        <div class="row">
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/4800_dveri-vhidni-feroom.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні Feroom НОВОСЕЛ EGGER</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/5500_2482898601.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні ПБ-21 Венге структурний</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/6500_dveri-vhidni-po-58.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні ПO-58 Beнгe cірий гoризoнт</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex-smartfone collapse multi-collapse none" id="multiCollapse15">
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal" id="call" >Залишити заявку</button>
+            <button class="btn btn-success"  id="call" ><ul class="list-unstyled text-small">
+                <li class="phone"><a href="tel:+380996009616">&#9990; +38 (099) 600 96 16</a></li>
+                <li class="phone"><a href="tel:+380986009616">&#9990; +38 (098) 600 96 16</a></li>
+            </ul></button>
+        </div>
+        <h4 class="collapse multi-collapse none flex" id="multiCollapse15">Модельний ряд 6500-8500</h4>
+        <div class="row">
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/6700_dveri-vhidni-feroom.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні Feroom МІЛА ЛІЛУ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/7300_dveri-vhidni-feroom.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні Feroom МІЛА ЛІНЕЯ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/8300.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні ПК 23+ Горiх бiлоцеркiвський</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex-smartfone collapse multi-collapse none" id="multiCollapse15">
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal" id="call" >Залишити заявку</button>
+            <button class="btn btn-success"  id="call" ><ul class="list-unstyled text-small">
+                <li class="phone"><a href="tel:+380996009616">&#9990; +38 (099) 600 96 16</a></li>
+                <li class="phone"><a href="tel:+380986009616">&#9990; +38 (098) 600 96 16</a></li>
+            </ul></button>
+        </div>
+        <h4 class="collapse multi-collapse none flex" id="multiCollapse15">Модельний ряд 8500-11500</h4>
+        <div class="row">
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/8800.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні П-3К-52 Бетон темний</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/9400_dveri-vhidni-staj.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні Staj Berez Каскад Plus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/9700.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні ПК-180/161 Елiт Венге горизонт темний/ Царга бiла текстура</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/9900.jpg" alt="">
+                        <p style="color: black;" >ПК-209 ЕЛІТ Мармур темний</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/11500.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні Zimen Оптіма Aztec Дуб галіфакс шоколадний / Дуб галіфакс білий </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex-smartfone collapse multi-collapse none" id="multiCollapse15">
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal" id="call" >Залишити заявку</button>
+            <button class="btn btn-success"  id="call" ><ul class="list-unstyled text-small">
+                <li class="phone"><a href="tel:+380996009616">&#9990; +38 (099) 600 96 16</a></li>
+                <li class="phone"><a href="tel:+380986009616">&#9990; +38 (098) 600 96 16</a></li>
+            </ul></button>
+        </div>
+        <h4 class="collapse multi-collapse none flex" id="multiCollapse15">Модельний ряд 11500-17000</h4>
+        <div class="row">
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/12300_dveri-vhidni-luxor.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні Luxor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/12700.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні TermoScreen</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/15300_dveri-vhidni-staj.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні Staj Lux Трек антрацит/біле дерево</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/16003.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні Straj Proof Party C дуб сірий</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse15">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Input/17000_dveri-vhidni-staj.jpg" alt="">
+                        <p style="color: black;" >Двері вхідні Staj Proof standart Party BZ PF дуб полярний/ vin дуб полярний</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex-smartfone collapse multi-collapse none" id="multiCollapse15">
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal" id="call" >Залишити заявку</button>
+            <button class="btn btn-success"  id="call" ><ul class="list-unstyled text-small">
+                <li class="phone"><a href="tel:+380996009616">&#9990; +38 (099) 600 96 16</a></li>
+                <li class="phone"><a href="tel:+380986009616">&#9990; +38 (098) 600 96 16</a></li>
+            </ul></button>
+        </div>
+       <!--  <div class="row">
+            <h4 class="collapse multi-collapse none" id="multiCollapse5 ">Модельний ряд 1500-2500</h4>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse5">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/1335.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері UNICA Flex Eco Дуб б'є янко, Анкор</p>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/1600.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері LINEA 1X Дуб білий, Дуб шале сивий, Венге</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/1662.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері LINEA 8X Дуб білий, Дуб шале сивий, Венге</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/1750.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері LINEA 3X Дуб білий, Дуб шале сивий, Венге</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/1850.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері duplex дуб білий, скло біле лакобель</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/2345.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері RE 37 Бурштин</p>
+                    </div>
+                </div>
+            </div>
+            <h4 class="collapse multi-collapse none" id="multiCollapse1">Модельний ряд 2500-3500</h4>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/2550.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері re 37 софт-тач айс</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/2552.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері re 48 софт-тач айс</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/2800.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері che6 софт-тач айс</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/2600.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері next 2x муарова темно - сірий</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/3200.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері тріо 1 дуб вінтаж</p>
+                    </div>
+                </div>
+            </div>
+            <h4 class="collapse multi-collapse none" id="multiCollapse1">Модельний ряд 3500-4500</h4>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/3775.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері p steel 1 чорний кашемір</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/3935.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері тріо 1 дуб вінта патіна срібло</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/4000.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері re 48 білий глянець</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/4200.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері se8 софт-тач айс</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/4300.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері in13 клен айс</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/4400.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері p1 емаль біла ral 9003</p>
+                    </div>
+                </div>
+            </div>
+            <h4 class="collapse multi-collapse none" id="multiCollapse1">Модельний ряд 4500-5500</h4>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/4700.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері rain мідл</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/4800.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері in2 бетон смокі</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/4900.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері р18 емаль білий ral 9003</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/5000.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері royal 19 білий глянець</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/5400.jpg" alt="">
+                        <p style="color: black;" >
+                            Міжкімнатні двері ways 1 графіт</p>
+                    </div>
+                </div>
+            </div>
+            <h4 class="collapse multi-collapse none" id="multiCollapse1">Модельний ряд 5500-10000</h4>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/5600.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері p steel 1 фарбування по ral</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/6700.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері е7 графітове дзеркало, стійка білий глянець</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/7000.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері шарм 2 ажур з патіной</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/8500.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері u34 прихований монтаж</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse1">
+                    <div class="card1 card1-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/10000.jpg" alt="">
+                        <p style="color: black;" >Міжкімнатні двері us4s прихований монтаж висота до 3000 мм</p>
+                    </div>
+                </div>
+            </div> -->
+            <h4 class="collapse multi-collapse none" id="multiCollapse2">Модельний ряд 5000-27000</h4>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse2">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/5700.jpg" alt="">
+                        <p style="color: black;" >Двері книжка shift</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse2">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/7100.jpg" alt="">
+                        <p style="color: black;" >Розсувні двері helf</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse2">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/9400.jpg" alt="">
+                        <p style="color: black;" >Розсувні двері книжка book</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse2">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/15000.jpg" alt="">
+                        <p style="color: black;" >Розсувні двері compack</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5 ">
+                <div class="collapse multi-collapse none" id="multiCollapse2">
+                    <div class="card card-body ">
+                        <img  class="w-100" src="./DoorsImg/Interroom/27000.jpg" alt="">
+                        <p style="color: black;" >Розсувні двері roto</p>
+                    </div>
+                </div>
+            </div>
+             -->
+            
+        </div>
+
+    </div>
+    <a href="#" title="Вернуться к началу" class="topbutton">^Наверх</a>
+    <div class="onlySmartphone">
+        <div>
+            <button><a href="delivery.html" class="nav-link">Оплата та  доставка</a></button>
+        </div>
+        <div>
+            <button><a href="contact.html" class="nav-link">Контакти</a></button>
+        </div>
+    </div>
+    <footer class="border-top text-center bg-dark justify-content-sm-center " id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md">
+                    `<h5 style="font-size: 26px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Склад-магазин у Дніпрі</h5>
+                    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700;">Виготовляємо,продаємо,
+                        встановлюємо</p>`
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Корисні посилання</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a href="https://holz.ua/kak-pravilno-vybrat-mezhkomnatnye-dveri-blog/" target="_blank"  class="link-secondary">Як обрати двері</a></li>
+                        <li><a href="https://kvartirnyj-remont.com/kak-ustanovit-mezhkomnatnye-dveri-svoimi-rukami.html" target="_blank"  class="link-secondary">Як встановити двері</a></li>
+                        <li><a href="" class="link-secondary">fff</a></li>
+                        <li><a href="" class="link-secondary">fff</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Контактна інформація</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="phone"><a href="tel:+380996009616">&#9990; +38 (099) 600 96 16</a></li>
+                        <li class="phone"><a href="tel:+380986009616">&#9990; +38 (098) 600 96 16</a></li>
+                        <li class="email"><a href="mailto:example@mail.com">&#128386; dniprodveri@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Bundle with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+
+</body>
+</html>
